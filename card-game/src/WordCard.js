@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CharacterCard from './CharacterCard'
 import _ from 'lodash'
+import { Button } from 'react-bootstrap';
 
 
 
@@ -52,6 +53,13 @@ export default class WordCard extends Component {
         
         return (
             <div >
+
+                <header>
+                    <h1>Card-Game</h1>
+                    <h3 >Guess the word!!</h3>
+
+
+                </header>
                 {
                     Array.from(this.state.chars).map((c,i)=>
                     <CharacterCard value={c} key={i} attempt={this.state.attempt}
@@ -62,7 +70,9 @@ export default class WordCard extends Component {
                 <h1 id="message">{this.state.completed? "You Win":""}</h1>
             
                 <div>
-                    <button onClick={this.changState}>Try again!!</button>
+                    <button className="button1" onClick={this.changState}>Try again!!</button>
+                    
+                    
                 
                 
                 

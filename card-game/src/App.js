@@ -4,15 +4,13 @@ import './App.css';
 import WordCard from './WordCard';
 
 
+
 const word = "Hello"
-var wordList = ["Hello","React","JSX","Prayut"]
+var wordList = ["Hello","React","JSX","Computer"]
 
 var num  = Math.floor((Math.random()* 4));
 class App extends Component {
 
-  
-
-  
   render() {
     return (
       <div className="App">
