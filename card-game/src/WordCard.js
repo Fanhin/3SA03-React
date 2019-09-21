@@ -67,10 +67,10 @@ export default class WordCard extends Component {
                     />)
                 }
             
-                <h1 id="message">{this.state.completed? "You Win":""}</h1>
+                <h1 id="message" >{this.state.completed? "You Win":""}</h1>
             
                 <div>
-                    <button className="button1" onClick={this.changState}>Try again!!</button>
+                    <button className="button1" onClick={this.changState}>New Game</button>
                     
                     
                 

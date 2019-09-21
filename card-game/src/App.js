@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import './App.css';
+import logo from './logo.svg';
 //import CharacterCard from './CharacterCard';
 import WordCard from './WordCard';
+import { Container } from 'react-bootstrap';
 
 
 
@@ -13,11 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{backgroundColor: '#FDEDEC',height:'683px'}}>
+      
+        <header><img src={logo} className="App-logo" alt="logo" /></header>
         <WordCard value={wordList[num]} />
         {console.log(wordList[num])}
         
-  
+      
       </div>
     )
   }
