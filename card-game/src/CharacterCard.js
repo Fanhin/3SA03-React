@@ -10,6 +10,9 @@ export default class CharacterCard extends Component {
             }
         }
 
+        
+    
+
         componentDidUpdate(prevProps){
             if (prevProps.attempt != this.props.attempt) {
                 this.setState({active : false})
@@ -20,6 +23,8 @@ export default class CharacterCard extends Component {
             if (!this.state.active) {
                 this.props.activationHandler(this.props.value)
                 this.setState({active: true})
+    
+                
             }
         }
     
@@ -29,6 +34,10 @@ export default class CharacterCard extends Component {
             <div >
                 <div className={className} onClick={this.activate}>
                     {this.props.value}
+                    
+                
+
+                    
                 </div>
 
             </div>
