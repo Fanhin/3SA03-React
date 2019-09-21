@@ -6,27 +6,27 @@
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 8vmin;
 }
 .card{
   display: inline-block;
   text-align: center;
   width: 3em;
-  font-size: 3em;
+  font-size: 2.5em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin: 1em;
   user-select: none;
 
 }
 .card:hover{
-  background-color:green;
+  background-color:rgb(241, 128, 194);
   color: white;
 
 }
 
 .activeCard{
-  color: black;
-  background: green
+  color: white;
+  background: red;
 }
 .button1 {
   background-color: white; 
@@ -37,7 +37,7 @@
 }
 
 .button1:hover {
-  background-color:greenyellow;
+  background-color:rgb(194, 12, 12);
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }

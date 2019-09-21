@@ -55,7 +55,7 @@ export default class WordCard extends Component {
             <div >
 
                 <header>
-                    <h1>Card-Game</h1>
+                    <h1 style={{fontSize:40}}>Card-Game</h1>
                     <h3 >Guess the word!!</h3>
 
 
