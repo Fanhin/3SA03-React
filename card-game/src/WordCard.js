@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 
 
-const prepareStateFromWord = (given_word) => {
+let prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase()
     let chars = _.shuffle(Array.from(word))
     return {
@@ -23,6 +23,7 @@ export default class WordCard extends Component {
             this.state =prepareStateFromWord(this.props.value)
             
             
+            
     }
     //activationHandler = (c) =>;
 
@@ -39,9 +40,12 @@ export default class WordCard extends Component {
         console.log(`${c} has been activated.`)
        }
 
-       changState= ()=>{
+       changState= (c)=>{
         this.setState({guess: [], attempt:this.state.attempt + 1})
-        document.getElementById("message").innerHTML="";
+        this.setState({completed:false})
+        document.getElementById("message").innerHTML=""; 
+        window.location.reload();
+
        }
 
     render() {
@@ -50,15 +54,16 @@ export default class WordCard extends Component {
             <div >
                 {
                     Array.from(this.state.chars).map((c,i)=>
-                    <CharacterCard value={c} key={i} 
-                    attempt={this.state.attempt}
+                    <CharacterCard value={c} key={i} attempt={this.state.attempt}
                     activationHandler={this.activationHandler}
                     />)
                 }
             
-                <h1 id="message">{this.state.completed? "Win":""}</h1>
+                <h1 id="message">{this.state.completed? "You Win":""}</h1>
+            
                 <div>
                     <button onClick={this.changState}>Try again!!</button>
+                
                 
                 
                 </div>

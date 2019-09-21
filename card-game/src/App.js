@@ -5,9 +5,9 @@ import WordCard from './WordCard';
 
 
 const word = "Hello"
-const wordList = ["Hello","React","JavaScript"]
+var wordList = ["Hello","React","JSX","Prayut"]
 
-const num = ()=> Math.random(3)
+var num  = Math.floor((Math.random()* 4));
 class App extends Component {
 
   
@@ -16,7 +16,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <WordCard value={word} />
+        <WordCard value={wordList[num]} />
+        {console.log(wordList[num])}
+        
   
       </div>
     )
